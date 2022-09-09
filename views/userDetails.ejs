@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<body class="bg-warning">
+   <section>
+    <div class="container mt-5">
+      
+      <div class="row">
+        <div class="col-md-6">
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Name:</div>
+                <%=user.name%>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Email:</div>
+                <%=user.email%>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">City:</div>
+                <%=user.city%>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">country:</div>
+                <%=user.country%>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Gender:</div>
+                <%=user.gender%>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">DOB:</div>
+                <%=user.dob%>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">CGPA:</div>
+                <%=user.cgpa%>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="col-md-6 text-align-center justify-content-center text-light d-column">
+          <h4 class="bg-dark w-50 p-2">Profile Image</h4>
+            <img src="/images/<%=user.image%>" alt="Image Not found" width="50%">
+        </div>
+         <div class="container text-align-center justify-content-center p-5">
+          <div class="row w-50">
+            <a href="/edit/<%= user._id%>" class="btn btn-secondary btn-sm">Edit</a>
+          </div>
+          <div class="row w-50">
+            <a href="/delete/<%= user._id%>" class="btn btn-danger btn-sm">delete</a>
+          </div>
+         </div>
+      </div>
+    </div>
+   </section>
+   <script src="/bootstrap-5.2.0-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
